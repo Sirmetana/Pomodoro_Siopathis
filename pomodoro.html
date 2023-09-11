@@ -8,18 +8,21 @@
 </head>
 <body>
     
-    <label id="lbNomTempCels">Celsius :</label>
-    <input id ="inputTempCels" type="number" value=""/>
-    <label id="lbUnitTempCels"> °C</label>
+    <label id="lbPomodoro">Pomodoro</label>
     <br>
     <br>
-    <input id ="convButton" onclick="convertirCelsEnFahr(tempFahr.textContent)" class="favorite styled" type="button" value="Convertir"/>
-    
+    <input id ="timer" value ="30:00" readonly></input>
     <br>
     <br>
-    <label id="lbNomTempFahr">Fahrenheit :</label>
-    <label id="tempFahr"></label>
-    <script src="pomodoro.js"></script>
+    <input id ="timerButton" onclick="timer()" class="favorite styled" type="button" value="Lancer"/>
+    <br>
+    <br>
+    <br>
+    <input id ="timer" value ="30">  Durée compte à rebours</input>
+    <br>
+    <br>
+    <input id ="resetButton" onclick="resetTimer()" class="favorite styled" type="button" value="Reset"/>
+    <script src="pomodoro.js">
     </script>
 </body>
 </html>
