@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+    <link href="pomodoro.css" rel="stylesheet"/>
 </head>
+<body>
     <h1>Pomodoro</h1>
     <h2 id="activite">Travail</h1>
     <div>
-        <span id="timer">5:00</span>
-        <br>
-        <input class="bouton" id ="timerButton" onclick="lancer()" class="favorite styled" type="button" value="Lancer"/>
+        <label id="timer">5:00</label>
     </div>
-    <br>
-    <br>
-    <span>Durée de travail :</span>
-    <input id ="timerDureeTrav" value ="5"> minutes</input>
-    <br>
-    <span>Durée de pause :</span>
-    <input id ="timerDureePause" value ="4"> minutes</input>
-    <br>
-    <input class="bouton" id ="resetButton" onclick="setReset()" class="favorite styled" type="button" value="Reset"/>
+    <div id="parametres">
+        <input class="bouton" id ="timerBouton" onclick="lancer()" class="favorite styled" type="button" value="Lancer"/>
+        <div class="durees">
+            <label for="timerDureeTrav">Durée de travail :</label>
+            <input id ="timerDureeTrav" value ="5"> minutes</input>
+        </div>
+        <div class="durees">
+            <label for="timerDureePause">Durée de pause :</label>
+            <input id ="timerDureePause" name="timerDureePause" value ="4"> minutes</input>
+        </div>
+        <input class="bouton" id ="resetButton" onclick="setReset()" class="favorite styled" type="button" value="Réinitialiser"/>
+        
+    </div>
     <script src="pomodoro.js">
     </script>
-    <link href="pomodoro.css" rel="stylesheet" type="text/css" />
 </body>
 </html>

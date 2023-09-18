@@ -31,6 +31,7 @@ function startTimer() {
       {
         //console.log("Travail => Pause : "+ dureePause);
         activite =0;
+        dureePause = document.getElementById('timerDureePause').value;
         timeLimitInMinutes = dureePause;
         timeLimitInSeconds = timeLimitInMinutes * 60;
         timerElement.textContent = dureePause+ ':00';
@@ -40,6 +41,7 @@ function startTimer() {
       {
         //console.log("Pause => Travail : "+ dureeTrav);
         activite =1;
+        dureeTrav = document.getElementById('timerDureeTrav').value;
         timeLimitInMinutes = dureeTrav;
         timeLimitInSeconds = timeLimitInMinutes * 60;
         timerElement.textContent = dureeTrav+ ':00';
@@ -64,7 +66,7 @@ function startTimer() {
   
 }
 
-function lancer() //Lance le chrono et change le bouton Lancer/Pause
+function lancer() //Lance le chrono et change le Bouton Lancer/Pause
 {
   if(enCours == 0)  //Vérifie si le chrono tourne
   {  
@@ -75,11 +77,11 @@ function lancer() //Lance le chrono et change le bouton Lancer/Pause
     }
     enCours =1;
     document.getElementById('timerDureeTrav').value;
-    document.getElementById("timerButton").value = "Pause";
+    document.getElementById("timerBouton").value = "Pause";
   }
   else              //Reset le chrono si il tourne
   {
-    document.getElementById("timerButton").value = "Lancer";
+    document.getElementById("timerBouton").value = "Lancer";
     enCours =0;
   }
 
@@ -99,4 +101,5 @@ function setReset() //Réinitialise le chrono à la durée de travail
     timerElement.textContent =  Math.floor(timeLimitInSeconds / 60) + ":0" + timeLimitInSeconds % 60;
   }
   enCours = 0;
+  document.getElementById("timerBouton").value = "Lancer";
 }

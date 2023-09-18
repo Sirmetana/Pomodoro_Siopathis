@@ -1,15 +1,67 @@
 body{
     background-color:rgb(168, 8, 8);
-  }
-  
-  div{
-    color:white;
-    font-size:120px;
-    text-align:center;
-  }
-
-h1, h2, span, .bouton{
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
+    align-items: center;
+  }
 
+h1, h2, label, .bouton{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  justify-content: center;
+}
+
+h1{
+  font-size:80px;
+  text-decoration: underline;
+  color:white;
+}
+
+h2{
+  font-size:50px;
+  background-color: white;
+  border : solid;
+  border-color: white;
+  border-radius: 5px;
+  width : 20%;
+  padding : 3px;
+
+}
+
+.bouton{
+  font-size:20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+  
+#timer{
+  color:white;
+  font-size:120px;
+  text-align:center;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+#parametres{
+  display : flex;
+  flex-direction:column;
+  text-align: center;
+}
+
+.durees{
+  display : flex;
+  flex-direction:row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width : 50%;
+}
+
+input{
+  margin-right: 45px;
 }
