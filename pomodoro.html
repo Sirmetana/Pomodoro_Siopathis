@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
 </head>
-<body>
-    
-    <label id="lbPomodoro">Pomodoro</label>
-    <br>
-    <br>
-    <input id ="timer" value ="30:00" readonly></input>
-    <br>
-    <br>
-    <input id ="timerButton" onclick="setReset()" class="favorite styled" type="button" value="Lancer"/>
+    <h1>Pomodoro</h1>
+    <h2 id="activite">Travail</h1>
+    <div>
+        <span id="timer">5:00</span>
+        <input id ="timerButton" onclick="lancer()" class="favorite styled" type="button" value="Lancer"/>
+    </div>
     <br>
     <br>
     <br>
-    <input id ="timerDuree" value ="30">  Durée compte à rebours</input>
+    <span>Durée de travail :</span>
+    <input id ="timerDureeTrav" value ="5"> minutes</input>
     <br>
+    <span>Durée de pause :</span>
+    <input id ="timerDureePause" value ="4"> minutes</input>
+    <br>
+    <input id ="resetButton" onclick="setReset()" class="favorite styled" type="button" value="Reset"/>
     <br>
     <script src="pomodoro.js">
     </script>
