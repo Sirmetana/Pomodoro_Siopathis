@@ -1,7 +1,7 @@
 let dureeTrav = document.getElementById('timerDureeTrav').value;
-let dureePause = document.getElementById('timerDureePause').value;
+//let dureePause = document.getElementById('timerDureePause').value;
 
-let timeLimitInMinutes = dureeTrav;
+let timeLimitInMinutes = document.getElementById('timerDureeTrav').value;
 let timeLimitInSeconds = timeLimitInMinutes * 60;
 let timerElement = document.getElementById('timer');
 
@@ -31,7 +31,7 @@ function startTimer() {
       {
         //console.log("Travail => Pause : "+ dureePause);
         activite =0;
-        dureePause = document.getElementById('timerDureePause').value;
+        let dureePause = document.getElementById('timerDureePause').value;
         timeLimitInMinutes = dureePause;
         timeLimitInSeconds = timeLimitInMinutes * 60;
         timerElement.textContent = dureePause+ ':00';
@@ -76,13 +76,21 @@ function lancer() //Lance le chrono et change le Bouton Lancer/Pause
       premierLancer =1;
     }
     enCours =1;
-    document.getElementById('timerDureeTrav').value;
-    document.getElementById("timerBouton").value = "Pause";
+    document.getElementById("timerDureeTrav").disabled = true;
+    document.getElementById("timerDureePause").disabled = true;
+
+    dureeTrav = document.getElementById('timerDureeTrav').value;
+    timeLimitInMinutes = dureeTrav;
+    timeLimitInSeconds = timeLimitInMinutes * 60;
+    document.getElementById("timerBouton").value = "Réinitialiser";
   }
   else              //Reset le chrono si il tourne
   {
     document.getElementById("timerBouton").value = "Lancer";
     enCours =0;
+    setReset();
+    document.getElementById("timerDureeTrav").disabled = false;
+    document.getElementById("timerDureePause").disabled = false;
   }
 
 }
@@ -100,6 +108,6 @@ function setReset() //Réinitialise le chrono à la durée de travail
   {
     timerElement.textContent =  Math.floor(timeLimitInSeconds / 60) + ":0" + timeLimitInSeconds % 60;
   }
-  enCours = 0;
+  //enCours = 0;
   document.getElementById("timerBouton").value = "Lancer";
 }
