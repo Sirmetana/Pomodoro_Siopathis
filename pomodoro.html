@@ -10,7 +10,12 @@
 <body>
     <h1>Pomodoro</h1>
     <h2 id="activite">Travail</h1>
-    <div>
+    <div class="circle_div">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="base-timer__circle">
+              <circle class="base-timer__path-elapsed" cx="50" cy="50" r="25" />
+            </g>
+          </svg>
         <label id="timer">5:00</label>
     </div>
     <div id="parametres">
