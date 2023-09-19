@@ -1,12 +1,11 @@
 body{
-    background-color:rgb(168, 8, 8);
+    background-color:rgb(214, 4, 4);
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
     align-items: center;
   }
 
-h1, h2, label, .bouton{
+h1, h2, label, p, .bouton{
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -16,6 +15,7 @@ h1, h2, label, .bouton{
 
 h1{
   font-size:80px;
+  margin-top: 2%;
   text-decoration: underline;
   color:white;
 }
@@ -25,10 +25,12 @@ h2{
   background-color: white;
   border : solid;
   border-color: white;
-  border-radius: 5px;
-  width : 20%;
+  border-radius: 25px;
+  min-width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  width : 15%;
   padding : 3px;
-
 }
 
 .bouton{
@@ -36,15 +38,21 @@ h2{
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 15px;
+  border-radius: 5%;
   padding: 5px;
 }
   
 #timer{
+  border:solid;
+  border-width: 10px;
+  border-radius: 100%;
+  flex-grow: 3;
   color:white;
-  font-size:120px;
+  font-size:90px;
   text-align:center;
-  margin-top: 15%;
-  margin-bottom: 10%;
+  align-items: center;
+  width : 260px;
+  height: 260px;
 }
 
 svg {
@@ -69,7 +77,6 @@ circle{
 #parametres{
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10vh;
   display : flex;
   flex-direction:column;
   text-align: center;
@@ -84,16 +91,33 @@ circle{
 .durees{
   display : flex;
   flex-direction:row;
+  gap: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size:larger;
+  font-size:medium;
   font-weight: bold;
-  gap : 3vh;
 }
 
 input{
-  margin-right: 45px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: right;
+  min-width: 10vh;
+}
+
+.base-timer__svg{
+  display: none;
+}
+
+footer{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0%;
+  font-size: small;
+  font-weight: bold;
+  background-color: black;
+  color: white;
 }
