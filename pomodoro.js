@@ -8,6 +8,9 @@ let timerElement = document.getElementById('timer');
 document.getElementById("timerDureeTrav").addEventListener("change", arrondir);
 document.getElementById("timerDureePause").addEventListener("change", arrondir);
 
+document.getElementById("timerDureeTrav").addEventListener("change", arrondir);
+document.getElementById("timerDureePause").addEventListener("change", arrondir);
+
 if(parseInt(dureeTrav) <10) //Formate le chrono en 'mm:ss'
 {
   dureeTrav = '0' + dureeTrav;
